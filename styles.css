@@ -35,7 +35,7 @@ video {
     color: white;
     font-size: 3rem;
     text-align: center;
-    z-index: -1;
+    z-index: -100;
 }
 
 html {
@@ -79,9 +79,15 @@ GULE FARVE
 
 /*------ MENU --------- */
 
+nav {
+    background-color: black;
+}
+
 .hidden {
     transform: translateX(30%);
     opacity: 0;
+    background-color: black;
+    pointer-events: none;
 }
 
 #menuknap {
@@ -129,7 +135,11 @@ GULE FARVE
     background-color: black;
     height: 100vh;
     width: 100vw;
-    z-index: 10000;
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
 
 }
 
@@ -141,7 +151,8 @@ header {
     height: 150px;
     background-color: black;
     max-width: 1400px;
-    border: 1px solid red;
+    margin: 0 auto;
+
 }
 
 .logo_desktop {
@@ -152,6 +163,7 @@ header {
     width: 150px;
     margin: 0 auto;
     padding-top: 20px;
+
 }
 
 
@@ -203,6 +215,14 @@ button:hover {
     height: 100vh;
     width: 100vw;
     z-index: -1;
+}
+
+.right {
+    background-color: black;
+}
+
+.left {
+    background-color: black;
 }
 
 
