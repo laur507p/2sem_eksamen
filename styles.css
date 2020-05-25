@@ -13,7 +13,37 @@ img {
     width: 100%;
 }
 
-/*------ FONTS --------- */
+video {
+    width: 100%;
+}
+
+.hide {
+    display: none;
+}
+
+.wrapper {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 50px 0 50px;
+
+}
+
+.wrapper h1 {
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    z-index: -1;
+}
+
+html {
+    /*    cursor: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAATCAMAAAB4HKeYAAAACVBMVEX///8AAAD///9+749PAAAAAXRSTlMAQObYZgAAADRJREFUeAFjwAsYsfMYQYgRLsLICKWhskxMTDAmCEMAwhQmEEDho8szUiqPaR+xfIR7sQMAR6QAjICqvMYAAAAASUVORK5CYII=), auto;*/
+    cursor: url(curstir_mindre.svg), auto;
+}
+
+/*------------- COPY PASTE -------------- */
 
 /*
 BOLD
@@ -50,7 +80,7 @@ GULE FARVE
 /*------ MENU --------- */
 
 .hidden {
-    transform: translateX(-100%);
+    transform: translateX(30%);
     opacity: 0;
 }
 
@@ -61,9 +91,10 @@ GULE FARVE
     font-weight: 400;
     font-style: normal;
     position: absolute;
-    top: 2vw;
+    top: 5vw;
     right: 4vw;
     font-size: 2rem;
+    z-index: 10000;
 }
 
 #menu a {
@@ -73,8 +104,14 @@ GULE FARVE
     color: white;
     text-decoration: none;
     padding-right: 10px;
-
+    font-size: 1.5rem;
 }
+
+#menu li {
+    padding-bottom: 10px;
+    background-color: black;
+}
+
 
 #menu a:hover {
     color: #FFFF00;
@@ -87,12 +124,113 @@ GULE FARVE
 #menu {
     list-style-type: none;
     transition: transform .3s;
-    transform-origin: top left;
+    transform-origin: top right;
+    padding-top: 50px;
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    z-index: 10000;
+
 }
 
-@media only screen and (min-width: 600px) {
+a {
+    text-decoration: none;
+}
+
+header {
+    height: 150px;
+    background-color: black;
+    max-width: 1400px;
+    border: 1px solid red;
+}
+
+.logo_desktop {
+    display: none;
+}
+
+.logo_mobile {
+    width: 150px;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+
+
+/*----------------- FORSIDE -------------------*/
+
+button {
+    width: 35vw;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFF00;
+    border: 1px solid #FFFF00;
+    background-color: black;
+    border-radius: 50px;
+    transition: 0.3s;
+    font-size: 0.8rem;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+button:hover {
+    background-color: #FFFF00;
+    color: black;
+    transition: 0.3s;
+}
+
+.knapper {
+    text-align: center;
+    margin-top: 5vh;
+    z-index: 1000;
+}
+
+.logo {
+    width: 50vw;
+    margin: 0 auto;
+    margin-top: 25vh;
+    z-index: 1000;
+}
+
+#bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: -1;
+}
+
+
+/*----------------- mediaquieries ----------------*/
+
+@media only screen and (min-width: 1050px) {
+
+    .wrapper h1 {
+        text-align: left;
+    }
+
+    /*menu*/
+
     #menuknap {
         display: none;
+    }
+
+    #menu {
+        position: relative;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: auto;
+        width: auto;
+        padding-top: 10px;
+        z-index: 1000;
+        margin: 0 auto;
+        text-align: center;
     }
 
     #menu.hidden {
@@ -100,7 +238,60 @@ GULE FARVE
         opacity: 1;
     }
 
+    #menu a {
+        font-size: 1rem;
+        z-index: 100000;
+    }
+
     #menu li {
         display: inline-block;
+        padding: 0 30px 20px 30px;
+        transform: translateY(-4.5vw);
     }
+
+    .logo_desktop {
+        width: 15vw;
+        display: inline-block;
+        padding-top: 10px;
+    }
+
+    .left {
+        display: inline;
+        padding-right: 50px;
+    }
+
+
+    .right {
+        display: inline;
+        padding-left: 50px;
+    }
+
+    .logo_mobile {
+        display: none;
+    }
+
+
+
+    /*menu end*/
+
+    /*forside*/
+    button {
+        width: 15vw;
+        max-width: 200px;
+        padding: 10px;
+        margin: 0 10px 0 10px;
+        display: inline;
+    }
+
+    .knapper {
+        text-align: center;
+        margin-top: 5vh;
+    }
+
+    .logo {
+        width: 40vh;
+        margin: 0 auto;
+        margin-top: 25vh;
+    }
+
 }
