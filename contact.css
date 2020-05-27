@@ -6,6 +6,7 @@ p {
     color: white;
 }
 
+/*
 input[type=text],
 select,
 textarea {
@@ -49,9 +50,51 @@ input[type=submit]:hover {
     margin-bottom: 2rem;
 
 }
+*/
+
+form {
+    margin-top: 10px;
+    transition: all 4s ease-in-out;
+}
+
+.form_control {
+    width: 100%;
+    background: transparent;
+    backface-visibility: transparent;
+    border: 1px solid white;
+    outline: none;
+    /*    border-bottom: 1px solid #FFFF00;*/
+    color: white;
+    font-size: 18px;
+    margin-bottom: 16px;
+    padding: 5px;
+}
+
+input {
+    height: 45px;
+}
+
+form .submit {
+    background: transparent;
+    border-color: transparent;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+form .submit:hover {
+    border: 1px solid #FFFF00;
+    cursor: pointer;
+}
+
+
+
 
 .wrapper {
     display: flex;
+    padding-left: 4rem;
 }
 
 section {
