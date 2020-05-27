@@ -1,0 +1,115 @@
+h2 {
+    color: white;
+}
+
+p {
+    color: white;
+}
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #FFFF00;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: 'Lusitana', serif;
+}
+
+label {
+    color: white;
+    margin: 0 0 20px;
+    font-weight: 600;
+    font-family: 'Lusitana', serif;
+}
+
+input[type=submit] {
+    padding: 14px 20px;
+    border: 1px solid #FFFF00;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Lusitana', serif;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+input[type=submit]:hover {
+    background-color: #EFE2BA;
+}
+
+.letterform_container {
+    border-radius: 5px;
+    padding: 2rem;
+    border: 1px solid #FFFF00;
+    max-width: 900px;
+    margin-bottom: 2rem;
+
+}
+
+.wrapper {
+    display: flex;
+}
+
+section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.section_til_billede {
+    padding: 0px;
+}
+
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    flex-basis: 400px;
+}
+
+.title {
+    font-size: 2em;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    text-align: center;
+    align-content: center;
+
+}
+
+@media only screen and (max-width: 800px) {
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        flex-basis: 400px;
+    }
+
+    .letterform_container {
+        border-radius: 5px;
+        padding: 2rem;
+        border: 1px solid #FFFF00;
+        max-width: 900px;
+        margin-bottom: 2rem;
+        display: flex;
+
+    }
+
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .title {
+        font-size: 2em;
+        padding-top: 5vh;
+        padding-bottom: 1vh;
+        text-align: center;
+        align-content: center;
+
+    }
+
+}

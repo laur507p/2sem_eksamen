@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="contact.css">
     <link rel="stylesheet" href="https://use.typekit.net/mbk4moz.css">
 </head>
 
@@ -40,11 +41,52 @@
         <p><span class="gul_farve">@</span>greatbates</p>
     </div>
 
-    <section class="wrapper">
-        <h1>CONTACT</h1>
-    </section>
+    <div class="title">
+        <h2>CONTACT</h2>
+    </div>
+    <div class="wrapper">
+        <section id="contact">
+        </section>
 
-    <script src="script.js"></script>
+        <div class="letterform_container">
+            <form action="/action_page.php">
+                <label for="fname">Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+                <label for="lname">Surname</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your surname..">
+
+                <label for="subject">Message</label>
+                <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", start);
+
+        const url = `http://lauraragnars.dk/eksamen_wp/wordpress/wp-json/wp/v2/pages/39`;
+
+        async function start() {
+            const response = await fetch(url);
+            const json = await response.json();
+            visContact(json);
+        }
+
+
+        function visContact(data) {
+            console.log(data.content.rendered)
+            document.querySelector("#contact").innerHTML = data.content.rendered;
+            //            document.querySelector(".title").innerHTML = data.title.rendered;
+        }
+
+    </script>
 </body>
 
 </html>
