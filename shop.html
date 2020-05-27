@@ -36,11 +36,62 @@
         </nav>
     </header>
 
+    <div class="instagram_un">
+        <p><span class="gul_farve">@</span>greatbates</p>
+    </div>
+
     <section class="wrapper">
         <h1>SHOP</h1>
     </section>
 
+    <section class="data-container"></section>
+
+
+    <template>
+        <article class="shop-wrapper">
+            <img class="billede" src="" alt="">
+            <p class="navn"></p>
+            <p class="pris"></p>
+        </article>
+    </template>
+
     <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", hentData);
+
+
+        let produkter = [];
+        const link = "http://lauraragnars.dk/eksamen_wp/wordpress/wp-json/wp/v2/produkt";
+        const container = document.querySelector(".data-container");
+        const template = document.querySelector("template");
+
+        async function hentData() {
+            const response = await fetch(link);
+            produkter = await response.json();
+            visProdukter();
+            console.log(produkter);
+        }
+
+
+        function visProdukter() {
+            console.log("visProdukter")
+
+            container.innerHTML = "";
+
+            produkter.forEach(produkt => {
+                let klon = template.cloneNode(true).content;
+                klon.querySelector(".navn").textContent = produkt.title.rendered;
+                klon.querySelector(".pris").textContent = produkt.pris;
+                klon.querySelector("img").src = produkt.billede1.guid;
+
+
+                container.appendChild(klon);
+            })
+
+
+        }
+
+    </script>
 </body>
 
 </html>
