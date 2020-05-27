@@ -10,6 +10,8 @@ function sidenVises() {
 function toggleMenu() {
     console.log("toggleMenu");
 
+
+    document.querySelector(".instagram_un").classList.toggle("hide");
     document.querySelector("#menu").classList.toggle("hidden");
 
     let erSkjult = document.querySelector("#menu").classList.contains("hidden");

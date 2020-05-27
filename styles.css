@@ -137,7 +137,7 @@ nav {
     height: 100vh;
     width: 100vw;
     position: absolute;
-
+    padding-left: 0;
     left: 0;
     top: 0;
 
@@ -410,12 +410,15 @@ button:hover {
         z-index: 1000;
         margin: 0 auto;
         text-align: center;
+        margin-left: 0;
+        padding-left: 0;
     }
 
     #menu.hidden {
         transform: translateX(0);
         opacity: 1;
         pointer-events: all;
+
     }
 
     #menu a {
@@ -425,14 +428,20 @@ button:hover {
 
     #menu li {
         display: inline-block;
-        padding: 0 30px 20px 30px;
-        transform: translateY(-4.5vw);
+        padding: 0 3.5vh 20px 3.5vh;
+
+    }
+
+    .left,
+    .right {
+        transform: translateY(-2.5vw);
     }
 
     .logo_desktop {
         width: 15vw;
         display: inline-block;
-        padding-top: 10px;
+        padding-top: 20px;
+        margin-top: 10px;
     }
 
     .left {
