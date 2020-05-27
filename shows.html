@@ -49,7 +49,49 @@
         <h1>SHOWS</h1>
     </section>
 
+    <section class="shows-container"></section>
+
+    <template>
+        <div class="show-wrapper">
+            <p class="titel"></p>
+            <p class="sted"></p>
+        </div>
+    </template>
+
     <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", hentData);
+
+
+        let shows = [];
+        const link = "http://lauraragnars.dk/eksamen_wp/wordpress/wp-json/wp/v2/show?per_page=100";
+        const container = document.querySelector(".shows-container");
+        const template = document.querySelector("template");
+
+        async function hentData() {
+            const response = await fetch(link);
+            shows = await response.json();
+            visShows();
+        }
+
+        function visShows() {
+            console.log("visShows")
+
+            container.innerHTML = "";
+
+            shows.forEach(show => {
+                let klon = template.cloneNode(true).content;
+                klon.querySelector(".titel").textContent = show.titel;
+                klon.querySelector(".sted").textContent = show.sted;
+
+                container.appendChild(klon);
+
+            })
+
+
+        }
+
+    </script>
 </body>
 
 </html>

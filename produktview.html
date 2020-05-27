@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produktview</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://use.typekit.net/mbk4moz.css">
+
 </head>
 
 <body>
@@ -17,26 +19,58 @@
         <nav>
             <div id="menuknap">☰</div>
             <ul id="menu" class="hidden">
-                <div class="left">
-                    <li><a href="works.html" class="active">Works</a></li>
-                    <li><a href="shows.html">Shows</a></li>
-                    <li><a href="about.html">About</a></li>
-                </div>
-                <div class="logo_desktop">
+                <li class="left">
+                    <ul>
+                        <li><a href="works.html">Works</a></li>
+                        <li><a href="shows.html">Shows</a></li>
+                        <li><a href="about.html">About</a></li>
+                    </ul>
+                </li>
+                <li class="logo_desktop">
                     <a href="index.html"><img src="billeder/logoWtext.svg" alt="logo"></a>
-                </div>
-                <div class="right">
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                    <li><a href="cart.html">Cart</a></li>
-                </div>
+                </li>
+                <li class="right">
+                    <ul>
+                        <li><a href="shop.html" class="active">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="cart.html">Cart</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
 
+    <article class="shop-wrapper">
+        <img class="billede" src="" alt="">
+        <p class="navn"></p>
+        <p class="pris"></p>
+    </article>
 
 
     <script src="script.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", hentData);
+
+
+        let urlParams = new URLSearchParams(window.location.search);
+        let id = urlParams.get("id");
+        let produkt;
+
+        async function hentData() {
+            let jsonData = await fetch("http://lauraragnars.dk/eksamen_wp/wordpress/wp-json/wp/v2/produkt/" + id);
+            produkt = await jsonData.json();
+            console.log(produkt)
+            visProdukt();
+        }
+
+        function visProdukt() {
+            document.querySelector(".navn").textContent = produkt.title.rendered;
+            document.querySelector(".pris").textContent = produkt.pris;
+            document.querySelector(".billede").src = produkt.billede1.guid;
+        }
+
+    </script>
 </body>
 
 </html>

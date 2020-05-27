@@ -40,8 +40,17 @@
             </ul>
         </nav>
     </header>
+    <section class="wrapper">
+        <h1>WORKS</h1>
+    </section>
 
-    <h1>WORKS</h1>
+    <div class="year-menu">
+        <ul>
+            <li> <a href="#2011">2011</a></li>
+            <li><a href="#2012">2012</a></li>
+        </ul>
+    </div>
+
     <section class="works_wrapper"></section>
     <template class="grid">
         <article class="work_nr" data-work>
@@ -86,7 +95,7 @@
                 klon.querySelector("img").src = work.billede.guid;
                 klon.querySelector("h2").textContent = work.year;
                 klon.querySelector(".p1").textContent = work.sted;
-
+                klon.querySelector(".work_nr").setAttribute("id", work.year);
                 klon.querySelector(".work_nr").setAttribute("data-work", work.id);
                 klon.querySelector(".work_nr").addEventListener("click", visEnkelWork);
                 container.appendChild(klon);

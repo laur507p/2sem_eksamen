@@ -45,10 +45,11 @@
         <p><span class="gul_farve">@</span>greatbates</p>
     </div>
 
-    <div class="title">
-        <h2>CONTACT</h2>
-    </div>
+
     <div class="wrapper">
+        <h1>CONTACT</h1>
+    </div>
+    <div class="contact_wrapper">
         <section id="contact">
         </section>
 
@@ -76,7 +77,9 @@
                 <input type="email" class="form_control" name="email" placeholder="Your Email.." required>
 
                 <label for="subject">Message</label>
-                <textarea class="form_control" name="message" placeholder="Write something.." row="4" required></textarea>
+                <input type="text" class="form_control" name="message" placeholder="Write something.." required>
+
+                <!--                <textarea class="form_control" name="message" placeholder="Write something.." required></textarea>-->
 
                 <input type="submit" class="form_control submit" value="Submit">
             </form>
@@ -104,5 +107,8 @@
             document.querySelector("#contact").innerHTML = data.content.rendered;
             //            document.querySelector(".title").innerHTML = data.title.rendered;
         }
+
     </script>
-</body></html>
+</body>
+
+</html>

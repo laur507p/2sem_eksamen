@@ -3,6 +3,8 @@
     align-items: stretch;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
 .work_nr {
@@ -61,6 +63,46 @@ img {
 .luk {
     max-width: 100px;
 }
+
+.year-menu {
+    position: fixed;
+    right: 2vw;
+    top: 45vh;
+}
+
+.works_wrapper h2 {
+    color: white;
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    text-transform: uppercase;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.works_wrapper p {
+    color: #FFFF00;
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+.year-menu a {
+    color: #FFFF00;
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 1.5rem;
+}
+
+.year-menu a:hover {
+    text-decoration: underline;
+}
+
 
 @media only screen and (max-width: 750px) {
     .work_nr {

@@ -90,6 +90,10 @@
 
 
                 container.appendChild(klon);
+
+                container.lastElementChild.addEventListener("click", () => {
+                    location.href = "produktview.html?id=" + produkt.id;
+                });
             })
 
 
