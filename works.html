@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Works</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="works.css">
     <link rel="stylesheet" href="https://use.typekit.net/mbk4moz.css">
 </head>
 
@@ -36,12 +37,76 @@
         </nav>
     </header>
 
-    <section class="wrapper">
-        <h1>WORKS</h1>
+    <h1>WORKS</h1>
+    <section class="works_wrapper"></section>
+    <template class="grid">
+        <article class="work_nr" data-work>
+            <img src="" alt="">
+            <h2 class="aarstal"></h2>
+            <p class="p1"></p>
+        </article>
+    </template>
+
+    <section id="detalje" class="skjul">
+        <button class="luk">X</button>
+        <article class="work_nr">
+            <img src="" alt="">
+        </article>
     </section>
 
 
-    <script src="script.js"></script>
+    <script>
+        const endpoint = ("http://lauraragnars.dk/eksamen_wp/wordpress/wp-json/wp/v2/work");
+        document.addEventListener("DOMContentLoaded", preStart);
+        let works = [];
+        let filter = "alle";
+        const container = document.querySelector(".works_wrapper");
+        const detalje = document.querySelector("#detalje");
+
+        function preStart() {
+            hentData();
+        }
+
+        async function hentData() {
+            const response = await fetch(endpoint);
+            works = await response.json();
+            console.log(works);
+            start();
+        }
+
+        function start() {
+            container.innerHTML = "";
+            const workTemplate = document.querySelector("template");
+            works.forEach(work => {
+                let klon = workTemplate.cloneNode(true).content;
+                klon.querySelector("img").src = work.billede.guid;
+                klon.querySelector("h2").textContent = work.year;
+                klon.querySelector(".p1").textContent = work.sted;
+
+                klon.querySelector(".work_nr").setAttribute("data-work", work.id);
+                klon.querySelector(".work_nr").addEventListener("click", visEnkelWork);
+                container.appendChild(klon);
+            })
+        }
+
+        function visEnkelWork() {
+
+            let workId = this.getAttribute("data-work");
+
+            let single = works.find(work => {
+                if (workId == work.id) {
+                    detalje.style.visibility = "visible";
+                    detalje.querySelector("img").src = work.billede.guid;
+                    detalje.querySelector(".luk").addEventListener("click", skjul);
+                }
+            })
+        }
+
+        function skjul() {
+            document.querySelector("#detalje").style.visibility = "hidden";
+        }
+
+    </script>
 </body>
 
 </html>
