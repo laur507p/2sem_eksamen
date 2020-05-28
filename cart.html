@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cart</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cart.css">
     <link rel="stylesheet" href="https://use.typekit.net/mbk4moz.css">
 </head>
 
@@ -49,7 +50,78 @@
         <h1>CART</h1>
     </section>
 
-    <script src="script.js"></script>
-</body>
+    <section class="content">
+        <div class="wrapper">
+            <form method="post" action="/cart" id="cart_form" class="cart_form">
+                <ul class="cart_items">
+                    <li class="cart_item" data-card-id="1">
+                        <div class="item_image_details">
+                            <a class="item_image" href="billeder/canvas.jpg" title="Canvas" style="background-image: url(billeder/canvas.jpg)"></a>
+                            <div class="item_details">
+                                <a class="item_product">
+                                    <span class="item_details_name">Canvas</span>
+                                    <span class="item_details_price">
+                                        <span class="currency_sign">$</span>
+                                        "150.00 "
+                                        <span class="currency_code">USD</span>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="item_quantity_holder">
+                            <button class="decrease_button" type="button" data-func="minus">
+                                <svg viewBox="0 0 20 20">
+                                    <path d="M5 9h10v2H5z"></path>
+                                    <path d="M5 9h10v2H5z"></path>
+                                </svg>
+                            </button>
+                            <input type="text" name="cart[update][222513371]" id value="1" class="quantity" autocomplete="off">
+                            <button class="increase_button" type="button" data-func="plus">
+                                <svg viewBox="0 0 20 20">
+                                    <path d="M11 5H9v4H5v2h4v4h2v-4h4V9h-4z"></path>
+                                </svg>
+                            </button>
+                            ::after
+                        </div>
+                        <div class="price">
+                            <span class="currency_sign">$</span>
+                            "150.00 "
+                            <span class="currency_code">USD</span>
+                        </div>
+                        ::after
+                    </li>
+                </ul>
+                <div class="cart_footer">
+                    <div class="cart_totals">
+                        <h3>
+                            "Total "
+                            <span>
+                                <span class="currency_sign">$</span>
+                                "150.00 "
+                                <span class="currency_code">USD</span>
+                            </span>
+                        </h3>
+                        <button type="submit" name="checkout" title="Checkout" class="button checkout_button">Checkout</button>
+                        <a class="button_continue_shopping" href="produktview.html">Continue shopping</a>
+                    </div>
+                    ::after
+                </div>
+                ::after
+            </form>
+        </div>
+    </section>
+    <div class="site_footer">
+        <div class="background"></div>
+        <div class="left_side">
+            <a href="produktview.html">Continue shopping</a>
+        </div>
+        <div class="right_side">
+            <div class="footer_divider"></div>
+            <a href="checkout.html">Checkout</a>
+        </div>
+    </div>
 
-</html>
+
+    <script src="script.js">
+    </script>
+</body></html>

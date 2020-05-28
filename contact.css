@@ -1,4 +1,4 @@
-h2 {
+h1 {
     color: white;
     font-family: roc-grotesk, sans-serif;
     font-weight: 400;
@@ -12,56 +12,8 @@ p {
     font-style: normal;
 }
 
-/*
-input[type=text],
-select,
-textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #FFFF00;
-    border-radius: 4px;
-    box-sizing: border-box;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-    font-family: 'Lusitana', serif;
-}
-
-label {
-    color: white;
-    margin: 0 0 20px;
-    font-weight: 600;
-    font-family: 'Lusitana', serif;
-}
-
-input[type=submit] {
-    padding: 14px 20px;
-    border: 1px solid #FFFF00;
-    border-radius: 4px;
-    cursor: pointer;
-    font-family: 'Lusitana', serif;
-    font-weight: 800;
-    font-size: 1rem;
-}
-
-input[type=submit]:hover {
-    background-color: #EFE2BA;
-}
-
-.letterform_container {
-    border-radius: 5px;
-    padding: 2rem;
-    border: 1px solid #FFFF00;
-    max-width: 900px;
-    margin-bottom: 2rem;
-
-}
-
-*/
-
 form {
     margin-top: 10px;
-    transition: all 4s ease-in-out;
 }
 
 .form_control {
@@ -70,12 +22,18 @@ form {
     backface-visibility: transparent;
     border: 1px solid white;
     outline: none;
+
     border-radius: 50px;
     /*    border-bottom: 1px solid #FFFF00;*/
     color: white;
     font-size: 18px;
     margin-bottom: 16px;
     padding: 20px;
+
+    color: white;
+    font-size: 18px;
+    margin-bottom: 16px;
+    padding: 10px;
 }
 
 input {
@@ -84,24 +42,6 @@ input {
     font-weight: 400;
     font-style: normal;
 }
-
-
-/*
-form .submit {
-    background: transparent;
-    border-color: transparent;
-    font-size: 20px;
-    font-weight: bold;
-    letter-spacing: 2px;
-    height: 50px;
-    margin-top: 20px;
-}
-
-form .submit:hover {
-    border: 1px solid #FFFF00;
-    cursor: pointer;
-}
-*/
 
 form .submit {
     width: 100%;
