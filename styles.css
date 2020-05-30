@@ -472,7 +472,7 @@ footer {}
     /*menu end*/
 
     /*forside*/
-    button {
+    .knapper button {
         width: 15vw;
         max-width: 200px;
         padding: 10px;
