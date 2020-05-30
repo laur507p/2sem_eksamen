@@ -327,11 +327,54 @@ button:hover {
 }
 
 
+/*----------------- PRODUKT SINGLEVIEW -------------------*/
+
+.single-view article {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    align-content: flex-end;
+}
+
+.single-view .billeder {
+    flex-basis: 500px;
+    flex-grow: 1;
+}
+
+.single-view .text {
+    flex-basis: 500px;
+    flex-grow: 1;
+    text-align: left;
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    align-self: flex-end;
+}
+
+.single-view .navn {
+    text-align: left
+}
+
+.single-view .pris {
+    text-align: left
+}
+
+.single-view .storrelse {
+    color: white;
+    text-align: left;
+}
+
+.single-view .beskrivelse {
+    color: white;
+    text-align: left;
+}
 
 
 
+/*----------------- FOOTER -------------------*/
 
-
+footer {}
 
 
 

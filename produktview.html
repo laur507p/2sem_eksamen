@@ -39,12 +39,20 @@
             </ul>
         </nav>
     </header>
+    <section class="single-view">
+        <article class="shop-wrapper">
+            <div class="billeder">
+                <img class="billede" src="" alt="">
+            </div>
+            <div class="text">
+                <p class="navn"></p>
+                <p class="pris"></p>
+                <p class="storrelse"></p>
+                <p class="beskrivelse"></p>
 
-    <article class="shop-wrapper">
-        <img class="billede" src="" alt="">
-        <p class="navn"></p>
-        <p class="pris"></p>
-    </article>
+            </div>
+        </article>
+    </section>
 
 
     <script src="script.js"></script>
@@ -67,6 +75,8 @@
         function visProdukt() {
             document.querySelector(".navn").textContent = produkt.title.rendered;
             document.querySelector(".pris").textContent = produkt.pris;
+            document.querySelector(".beskrivelse").textContent = produkt.beskrivelse;
+            document.querySelector(".storrelse").textContent = produkt.storrelse;
             document.querySelector(".billede").src = produkt.billede1.guid;
         }
 
