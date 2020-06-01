@@ -1,5 +1,14 @@
 .content {
     padding-top: 40px;
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.site_footer {
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 .content .wrapper {
@@ -221,6 +230,7 @@
 .left_side + .right_side {
     border-left: 2px solid #FFFF00;
     left: -1px;
+
 }
 
 .site_footer .right_side > a {

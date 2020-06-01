@@ -25,7 +25,7 @@ video {
 .wrapper {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 50px 0 20px;
+    padding: 0 20px 0 20px;
 
 }
 
@@ -301,7 +301,7 @@ button:hover {
 
 .titel {
     font-family: roc-grotesk, sans-serif;
-    font-weight: 400;
+    font-weight: 600;
     font-style: normal;
     color: white;
     text-transform: uppercase;
@@ -334,7 +334,7 @@ button:hover {
     flex-wrap: wrap;
     max-width: 1100px;
     margin: 0 auto;
-    align-content: flex-end;
+
 }
 
 .single-view .billeder {
@@ -349,11 +349,12 @@ button:hover {
     font-family: roc-grotesk, sans-serif;
     font-weight: 400;
     font-style: normal;
-    align-self: flex-end;
+    margin-top: 5vw;
 }
 
 .single-view .navn {
-    text-align: left
+    text-align: left;
+    font-size: 2.5rem;
 }
 
 .single-view .pris {
@@ -370,11 +371,63 @@ button:hover {
     text-align: left;
 }
 
+.single-view img {
+    padding: 50px;
+
+}
+
 
 
 /*----------------- FOOTER -------------------*/
 
-footer {}
+footer {
+    color: white;
+    display: flex;
+    border-top: 1px solid grey;
+    margin-top: 50px;
+    padding: 20px;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+footer p {
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 10px;
+    flex-basis: 600px;
+}
+
+footer a {
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 10px;
+    color: white;
+    flex-basis: 600px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+/*----------------- ABOUT -------------------*/
+
+.about-content {
+    color: white;
+    max-width: 1100px;
+    margin: 0 auto;
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    padding: 12vw;
+    font-style: normal;
+}
+
+
+
+
 
 
 
@@ -385,6 +438,13 @@ footer {}
 
     .wrapper h1 {
         text-align: left;
+    }
+
+    .wrapper {
+        max-width: 1100px;
+        margin: 0 auto;
+        padding: 0 50px 0 20px;
+
     }
 
     .instagram_un {
@@ -505,7 +565,7 @@ footer {}
 
     .titel {
         font-family: roc-grotesk, sans-serif;
-        font-weight: 400;
+        font-weight: 500;
         font-style: normal;
         color: white;
         text-transform: uppercase;
@@ -527,6 +587,32 @@ footer {}
         max-width: 1100px;
         margin: auto;
         padding: 0 50px 0 20px;
+    }
+
+    /*----------------- ABOUT -------------------*/
+
+    .about-content {
+        color: white;
+        max-width: 1100px;
+        margin: 0 auto;
+        font-family: roc-grotesk, sans-serif;
+        font-weight: 400;
+        padding: 20px;
+        font-style: normal;
+    }
+
+    /*----------------- FOOTER -------------------*/
+
+
+
+    footer p {
+
+        flex-basis: 300px;
+    }
+
+    footer a {
+
+        flex-basis: 300px;
     }
 
 

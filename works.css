@@ -110,6 +110,16 @@ img {
         padding: 50px;
     }
 
+    .year-menu {
+        position: absolute;
+        right: 45vw;
+        top: 38vh;
+    }
+
+    .works-h1 {
+        padding-bottom: 20vw;
+    }
+
     .work_nr:nth-child(even) img {
         margin-top: 3rem;
     }
