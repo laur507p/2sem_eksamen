@@ -55,6 +55,14 @@
         <h1>SHOP</h1>
     </section>
 
+    <div class="filtrering">
+        <button type="button" class="filter valgt" data-produkt="alle">Alle</button>
+        <button type="button" class="filter" data-produkt="tshirts">T-Shirts</button>
+        <button type="button" class="filter" data-produkt="pins">Pins &amp; badges</button>
+        <button type="button" class="filter" data-produkt="canvas">Canvas</button>
+        <button type="button" class="filter" data-produkt="accessories">Accessories</button>
+        <button type="button" class="filter" data-produkt="stickers">Stickers</button>
+    </div>
     <section class="data-container"></section>
 
 
@@ -69,8 +77,8 @@
     <footer>
         <p>BATES 2020 <span class="gul_farve">&copy;</span></p>
         <a href="mailto: abc@example.com">info@greatbates.com <span class="gul_farve">&#8594;</span></a>
-        <a href="about.html">Shipping and handling <span class="gul_farve"> &#8594;</span></a>
-        <a href="https://www.instagram.com/greatbates/">Instagram <span class="gul_farve"> &#8594;</span></a>
+        <a href="contact.html">Contact <span class="gul_farve"> &#8594;</span></a>
+        <a href="https://www.instagram.com/greatbates/" target="_blank">Instagram <span class="gul_farve"> &#8594;</span></a>
     </footer>
 
     <script src="script.js"></script>
@@ -79,7 +87,8 @@
 
 
         let produkter = [];
-        const link = "http://lauraragnars.dk/eksamen_wp/wordpress/wp-json/wp/v2/produkt";
+        let filter = "alle";
+        const link = "http://lauraragnars.dk/eksamen_wp/wordpress/wp-json/wp/v2/produkt?per_page=100";
         const container = document.querySelector(".data-container");
         const template = document.querySelector("template");
 
@@ -88,6 +97,8 @@
             produkter = await response.json();
             visProdukter();
             console.log(produkter);
+            addEventlistenersToAllButtons();
+
         }
 
 
@@ -97,20 +108,39 @@
             container.innerHTML = "";
 
             produkter.forEach(produkt => {
-                let klon = template.cloneNode(true).content;
-                klon.querySelector(".navn").textContent = produkt.title.rendered;
-                klon.querySelector(".pris").textContent = produkt.pris;
-                klon.querySelector("img").src = produkt.billede1.guid;
+                if (filter == "alle" || filter == produkt.kategori) {
+                    let klon = template.cloneNode(true).content;
+                    klon.querySelector(".navn").textContent = produkt.title.rendered;
+                    klon.querySelector(".pris").textContent = produkt.pris;
+                    klon.querySelector("img").src = produkt.billede1.guid;
 
 
-                container.appendChild(klon);
+                    container.appendChild(klon);
 
-                container.lastElementChild.addEventListener("click", () => {
-                    location.href = "produktview.html?id=" + produkt.id;
-                });
+                    container.lastElementChild.addEventListener("click", () => {
+                        location.href = "produktview.html?id=" + produkt.id;
+                    });
+                }
             })
 
+        }
 
+
+        function addEventlistenersToAllButtons() {
+            document.querySelectorAll(".filter").forEach(elm => {
+                elm.addEventListener("click", filtrering);
+
+            })
+        }
+
+        function filtrering() {
+            console.log("FILTER");
+            filter = this.dataset.produkt;
+            document.querySelectorAll(".filter").forEach(elm2 => {
+                elm2.classList.remove("valgt");
+            })
+            this.classList.add("valgt");
+            visProdukter();
         }
 
     </script>
