@@ -5,6 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Works</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="works.css">
     <link rel="stylesheet" href="https://use.typekit.net/mbk4moz.css">
@@ -51,8 +58,9 @@
 
     <div class="year-menu">
         <ul>
-            <li> <a href="#2011">2011</a></li>
             <li><a href="#2012">2012</a></li>
+            <li> <a href="#2011">2011</a></li>
+
         </ul>
     </div>
 
@@ -75,7 +83,7 @@
     <footer>
         <p>BATES 2020 <span class="gul_farve">&copy;</span></p>
         <a href="mailto: abc@example.com">info@greatbates.com <span class="gul_farve">&#8594;</span></a>
-        <a href="about.html">Shipping and handling <span class="gul_farve"> &#8594;</span></a>
+        <a href="contact.html">Contact <span class="gul_farve"> &#8594;</span></a>
         <a href="https://www.instagram.com/greatbates/">Instagram <span class="gul_farve"> &#8594;</span></a>
     </footer>
 
@@ -108,7 +116,7 @@
                 klon.querySelector("img").src = work.billede.guid;
                 klon.querySelector("h2").textContent = work.year;
                 klon.querySelector(".p1").textContent = work.sted;
-                klon.querySelector(".work_nr").setAttribute("id", work.year);
+                klon.querySelector(".work_nr").setAttribute("id", work.menuid);
                 klon.querySelector(".work_nr").setAttribute("data-work", work.id);
                 klon.querySelector(".work_nr").addEventListener("click", visEnkelWork);
                 container.appendChild(klon);
