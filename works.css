@@ -13,7 +13,7 @@
 }
 
 img {
-    position: relative;
+    /*    position: relative;*/
 }
 
 .work_nr:nth-child(even) img {
@@ -68,6 +68,7 @@ img {
     position: fixed;
     right: 2vw;
     top: 45vh;
+    z-index: 1000000000;
 }
 
 .works_wrapper h2 {
@@ -104,7 +105,7 @@ img {
 }
 
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 800px) {
     .work_nr {
         flex: 0 1 100%;
         padding: 50px;
@@ -114,10 +115,14 @@ img {
         position: absolute;
         right: 45vw;
         top: 38vh;
+        z-index: 0;
+
     }
 
     .works-h1 {
         padding-bottom: 20vw;
+        margin-bottom: 0;
+        text-align: center;
     }
 
     .work_nr:nth-child(even) img {
@@ -133,5 +138,10 @@ img {
         flex-direction: column;
         align-content: center;
         padding-top: 15rem;
+    }
+
+    .works_wrapper {
+        padding: 20px;
+        margin-top: 110px;
     }
 }

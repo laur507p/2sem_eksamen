@@ -188,6 +188,7 @@ button {
     margin-bottom: 10px;
     text-decoration: none;
     background-color: transparent;
+    cursor: pointer;
 }
 
 button:hover {
@@ -196,10 +197,51 @@ button:hover {
     transition: 0.3s;
 }
 
+.button a {
+    color: #FFFF00;
+}
+
+.button {
+    width: 35vw;
+    padding: 10px;
+    padding-left: 50px;
+    padding-right: 50px;
+    display: block;
+    text-align: center;
+    font-family: roc-grotesk, sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #FFFF00;
+    border: 1px solid #FFFF00;
+    background-color: black;
+    border-radius: 50px;
+    transition: 0.3s;
+    font-size: 0.8rem;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #FFFF00;
+    color: black;
+    transition: 0.3s;
+}
+
+.button a:hover {
+    color: black;
+}
+
 .knapper {
     text-align: center;
     margin-top: 5vh;
     z-index: 1000;
+}
+
+.knapper .button {
+    border: 2px solid #FFFF00;
 }
 
 .logo {
@@ -563,6 +605,13 @@ footer a:hover {
         padding: 10px;
         margin: 0 10px 0 10px;
         display: inline;
+    }
+
+    .knapper .button {
+        display: inline-block;
+        max-width: 200px;
+        padding: 10px;
+        margin: 0 10px 0 10px;
     }
 
     .knapper {

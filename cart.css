@@ -97,7 +97,7 @@
 
 .cart_items .item_quantity_holder button {
     border-radius: 3ex;
-    transform: translateZ(0px; );
+    /*    transform: translateZ(0px);*/
     background: none;
     border: 1px solid white;
     color: white;
@@ -186,6 +186,10 @@
     display: block;
 }
 
+.visability {
+    visibility: hidden;
+}
+
 .site_footer {
     display: flex;
     align-items: center;
@@ -193,7 +197,9 @@
     color: white;
     height: 60px;
     left: 0;
-    position: fixed;
+    top: 100vh;
+
+    position: absolute;
     text-align: center;
     width: 100%;
     visibility: hidden;
@@ -240,6 +246,10 @@
     display: block;
     line-height: 60px;
     color: white;
+}
+
+.cartfooter {
+    margin-top: 100px;
 }
 
 
