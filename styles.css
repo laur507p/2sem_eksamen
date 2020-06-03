@@ -159,7 +159,7 @@ header {
 .logo_desktop {
     display: none;
     max-width: 250px;
-    }
+}
 
 .logo_mobile {
     width: 150px;
@@ -725,6 +725,17 @@ footer a:hover {
         font-style: normal;
         margin-top: 5vw;
         padding: 0px;
+    }
+
+    .overlay {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.23);
+        color: #FFFF00;
+        font-family: roc-grotesk, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
     }
 
 

@@ -137,12 +137,18 @@
                     detalje.style.visibility = "visible";
                     detalje.querySelector("img").src = work.billede.guid;
                     detalje.querySelector(".luk").addEventListener("click", skjul);
+                    document.querySelector(".instagram_un").classList.add("hide");
+                    document.querySelector(".year-menu").classList.add("hide");
                 }
             })
         }
 
         function skjul() {
             document.querySelector("#detalje").style.visibility = "hidden";
+            document.querySelector(".instagram_un").classList.remove("hide");
+            document.querySelector(".year-menu").classList.remove("hide");
+
+
         }
 
     </script>
