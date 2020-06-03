@@ -151,14 +151,15 @@ a {
 
 header {
     height: 150px;
-    max-width: 1400px;
+    max-width: 1100px;
     margin: 0 auto;
 
 }
 
 .logo_desktop {
     display: none;
-}
+    max-width: 250px;
+    }
 
 .logo_mobile {
     width: 150px;
@@ -439,6 +440,8 @@ button:hover {
     position: absolute;
     top: 25vh;
     left: 40vw;
+    max-width: 20vw;
+    ;
 }
 
 .produkt-button {
