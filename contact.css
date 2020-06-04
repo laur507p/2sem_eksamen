@@ -130,6 +130,8 @@ section {
     .contact_wrapper {
         display: flex;
         flex-wrap: wrap;
+        padding-left: 10vw;
+        padding-right: 10vw;
     }
 
     .title {

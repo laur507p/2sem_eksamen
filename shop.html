@@ -50,32 +50,35 @@
     </header>
 
     <div class="instagram_un">
-        <p><span class="gul_farve">@</span>greatbates</p>
+        <a href="https://www.instagram.com/greatbates/" target="_blank"><span class="gul_farve">@</span>greatbates</a>
     </div>
 
-    <section class="wrapper">
-        <h1>SHOP</h1>
+    <section class="all-wrapper">
+
+
+        <section class="wrapper">
+            <h1>SHOP</h1>
+        </section>
+
+        <div class="filtrering">
+            <button type="button" class="filter valgt" data-produkt="alle">All products</button>
+            <button type="button" class="filter" data-produkt="tshirts">T-Shirts</button>
+            <button type="button" class="filter" data-produkt="pins">Pins &amp; badges</button>
+            <button type="button" class="filter" data-produkt="canvas">Canvas</button>
+            <button type="button" class="filter" data-produkt="accessories">Accessories</button>
+            <button type="button" class="filter" data-produkt="stickers">Stickers</button>
+        </div>
+        <section class="data-container"></section>
+
+
+        <template>
+            <article class="shop-wrapper">
+                <img class="billede" src="" alt="">
+                <p class="navn"></p>
+                <p class="pris"></p>
+            </article>
+        </template>
     </section>
-
-    <div class="filtrering">
-        <button type="button" class="filter valgt" data-produkt="alle">All products</button>
-        <button type="button" class="filter" data-produkt="tshirts">T-Shirts</button>
-        <button type="button" class="filter" data-produkt="pins">Pins &amp; badges</button>
-        <button type="button" class="filter" data-produkt="canvas">Canvas</button>
-        <button type="button" class="filter" data-produkt="accessories">Accessories</button>
-        <button type="button" class="filter" data-produkt="stickers">Stickers</button>
-    </div>
-    <section class="data-container"></section>
-
-
-    <template>
-        <article class="shop-wrapper">
-            <img class="billede" src="" alt="">
-            <p class="navn"></p>
-            <p class="pris"></p>
-        </article>
-    </template>
-
     <footer>
         <p>BATES 2020 <span class="gul_farve">&copy;</span></p>
         <a href="mailto:info@greatbates.com">info@greatbates.com <span class="gul_farve">&#8594;</span></a>
