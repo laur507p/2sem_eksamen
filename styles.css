@@ -294,6 +294,10 @@ button:hover {
     text-decoration: underline;
 }
 
+.instagram_un a:visited {
+    color: white;
+}
+
 /*----------------- SHOP -------------------*/
 
 
@@ -427,8 +431,8 @@ button:hover {
     font-family: roc-grotesk, sans-serif;
     font-weight: 400;
     font-style: normal;
-    margin-top: 5vw;
-    padding: 70px;
+/*    margin-top: 5vw;*/
+    padding: 0 70px 0 70px;
 }
 
 .single-view .navn {
@@ -451,7 +455,7 @@ button:hover {
 }
 
 .single-view img {
-    padding: 50px;
+    padding: 50px 50px 0 50px;
 
 }
 
